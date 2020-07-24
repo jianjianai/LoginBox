@@ -1,13 +1,10 @@
 package cn.jji8.GUIxzdr;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.io.File;
 
 public class xiangzi implements Listener {
 
@@ -19,7 +16,7 @@ public class xiangzi implements Listener {
         peizi = b;
         wanjia = x;
     }
-    public void xianshimima(int wupin[],int shulian[]){//用于显示玩家的密码
+    public void xianshimima(int[] wupin, int[] shulian){//用于显示玩家的密码
         for(int i=0;i<=8;i++){
             if(wupin[i]!=-1){
                 ItemStack a = (ItemStack) peizi.物品列表.get(wupin[i]);

@@ -13,8 +13,8 @@ public class wanjia {
     Player wanjia;
     public xiangzi xiangzi;
     peizi peizi;
-    int wuping[] = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
-    int shuliang[] = {1,1,1,1,1,1,1,1,1};
+    int[] wuping = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
+    int[] shuliang = {1,1,1,1,1,1,1,1,1};
     int zhizheng=0;
 
     /*

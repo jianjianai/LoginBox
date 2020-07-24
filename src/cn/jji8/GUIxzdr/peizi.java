@@ -134,8 +134,8 @@ public class peizi {
                 try {
                     wanjiamima.save(wanjiamimapeizi);
                 }catch (IOException a){
-                    System.out.println(a);
-                    System.out.println("[箱子登入]:玩家密码保存失败！请检查磁盘空间，和文件权限");
+//                    System.out.println(a);
+                    Bukkit.getLogger().warning("[箱子登入]:玩家密码保存失败！请检查磁盘空间，和文件权限");
                 }
                 System.out.println("[箱子登入]:保存完毕！");
                 super.run();
