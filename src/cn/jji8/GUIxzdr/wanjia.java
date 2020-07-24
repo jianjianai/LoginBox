@@ -164,14 +164,14 @@ public class wanjia {
     }
     @Override
     public String toString() {
-        String to = "";
+        StringBuilder to = new StringBuilder();
         for(int i =0;i<=8;i++){
-            to = to+shuliang[i];
+            to.append(shuliang[i]);
         }
         for(int i =0;i<=8;i++){
-            to = to+wuping[i];
+            to.append(wuping[i]);
         }
-        return to;
+        return to.toString();
     }
     public void setwanjiamima(String mima1){//设置玩家密码，用来判断玩家输入的密码是否正确
         mima = mima1;
