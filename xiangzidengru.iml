@@ -17,5 +17,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="spigot-1.15.2" level="project" />
+    <orderEntry type="library" exported="" name="spigot-1.16.1_2" level="project" />
   </component>
 </module>
