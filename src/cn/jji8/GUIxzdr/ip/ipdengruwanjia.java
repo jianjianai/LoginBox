@@ -29,7 +29,10 @@ public class ipdengruwanjia {
         }
     }
     public boolean if是否超过ip玩家数量限制(String ip,int bz){
-        return getip玩家个数(ip) >= bz;
+        if(getip玩家个数(ip)<bz){
+            return false;
+        }
+        return true;
     }
     public int getip玩家个数(String ip){
         if(表.containsKey(ip)){

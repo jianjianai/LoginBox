@@ -28,8 +28,7 @@ public class chaoshiticu implements Listener {
                 }
             }
         };
-        // main.main是访问主类
-        BukkitRunnable.runTaskLater(main.main,peizi.登入超时时间*20);
+        BukkitRunnable.runTaskLater(main.i,peizi.登入超时时间*20);
     }
     @EventHandler
     public void wanjiazccg(zccg a){//玩家注册成功时

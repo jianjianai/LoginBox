@@ -13,8 +13,8 @@ public class wanjia {
     Player wanjia;
     public xiangzi xiangzi;
     peizi peizi;
-    int[] wuping = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
-    int[] shuliang = {1,1,1,1,1,1,1,1,1};
+    int wuping[] = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
+    int shuliang[] = {1,1,1,1,1,1,1,1,1};
     int zhizheng=0;
 
     /*
@@ -164,14 +164,14 @@ public class wanjia {
     }
     @Override
     public String toString() {
-        StringBuilder to = new StringBuilder();
+        String to = "";
         for(int i =0;i<=8;i++){
-            to.append(shuliang[i]);
+            to = to+shuliang[i];
         }
         for(int i =0;i<=8;i++){
-            to.append(wuping[i]);
+            to = to+wuping[i];
         }
-        return to.toString();
+        return to;
     }
     public void setwanjiamima(String mima1){//设置玩家密码，用来判断玩家输入的密码是否正确
         mima = mima1;

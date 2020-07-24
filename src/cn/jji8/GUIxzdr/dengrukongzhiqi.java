@@ -5,6 +5,7 @@ import cn.jji8.GUIxzdr.shijian.zccg;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Cancellable;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -17,7 +18,7 @@ import java.util.HashMap;
 
 public class dengrukongzhiqi implements Listener {//我是一个监听器,用来监听事件啦啦啦啦
 
-    peizi peizi = main.peizi;
+    peizi peizi = main.peizi;;
     HashMap biao = new HashMap();
 
     public void sanchuwanjia(String wanjianame){//删除一个未登入的玩家
@@ -98,6 +99,10 @@ public class dengrukongzhiqi implements Listener {//我是一个监听器,用来
             wanjia.dakaixiangzi();
         }
     }
+
+
+
+
     @EventHandler
     public void WanJiaPoHuaiFangKuai(BlockBreakEvent dj){//玩家破坏方块
         if(biao.containsKey(dj.getPlayer().getName())){

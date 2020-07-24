@@ -46,8 +46,8 @@ public class peizi {
     public ItemStack 分割线物品,确定按钮物品,重新输入按钮物品;
 
     public peizi(){
-        YamlConfiguration a = YamlConfiguration.loadConfiguration(new File(main.main.getDataFolder(), "config.yml"));
-        wanjiamima = YamlConfiguration.loadConfiguration(wanjiamimapeizi = new File(main.main.getDataFolder(),"玩家密码.yml"));
+        YamlConfiguration a = YamlConfiguration.loadConfiguration(new File(main.i.getDataFolder(),"peizi.yml"));
+        wanjiamima = YamlConfiguration.loadConfiguration(wanjiamimapeizi = new File(main.i.getDataFolder(),"玩家密码.yml"));
         System.out.println("[箱子登入]：§a开始加载配置");
         //string
         if(a.contains("输入你想修改的密码")){ 输入你想修改的密码 = a.getString("输入你想修改的密码");}else{System.out.println("[箱子登入]：§c输入你想修改的密码置文件错误，请检查配置文件");}
@@ -134,8 +134,8 @@ public class peizi {
                 try {
                     wanjiamima.save(wanjiamimapeizi);
                 }catch (IOException a){
-//                    System.out.println(a);
-                    Bukkit.getLogger().warning("[箱子登入]:玩家密码保存失败！请检查磁盘空间，和文件权限");
+                    System.out.println(a);
+                    System.out.println("[箱子登入]:玩家密码保存失败！请检查磁盘空间，和文件权限");
                 }
                 System.out.println("[箱子登入]:保存完毕！");
                 super.run();
