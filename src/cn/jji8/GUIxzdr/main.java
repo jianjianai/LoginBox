@@ -18,8 +18,8 @@ public class main extends JavaPlugin{
     public static dengrukongzhiqi dengrukongzhiqi;
     public void onEnable(){
         i=this;
-        System.out.println("[箱子登入]:作者:简简爱");
-        System.out.println("[箱子登入]:开始初始化");
+        Bukkit.getLogger().info("[箱子登入]:作者:简简爱");
+        Bukkit.getLogger().info("[箱子登入]:开始初始化");
 
         this.saveResource("peizi.yml",false);
         peizi = new peizi();
@@ -32,7 +32,7 @@ public class main extends JavaPlugin{
         Bukkit.getPluginManager().registerEvents(ipxianzi,this);
 
         if(peizi.登入超时踢出玩家){
-            System.out.println("[箱子登入]:登入超时踢出玩家：开启");
+            Bukkit.getLogger().info("[箱子登入]:登入超时踢出玩家：开启");
             chaoshiticu chaoshiticu = new chaoshiticu();
             Bukkit.getPluginManager().registerEvents(chaoshiticu,this);
         }
@@ -44,10 +44,11 @@ public class main extends JavaPlugin{
         Bukkit.getPluginCommand("强制玩家重新注册").setExecutor(new qxcxzc());
 
         if(peizi.拾取物品GUG后客户端不显示修复){
-            System.out.println("[箱子登入]:拾取物品GUG后客户端不显示修复：开启");
+            Bukkit.getLogger().info("[箱子登入]:拾取物品GUG后客户端不显示修复：开启");
             xiufu xiufu = new xiufu();
             Bukkit.getPluginManager().registerEvents(xiufu,this);
         }
-        System.out.println("[箱子登入]:初始化完成");
+        Bukkit.getLogger().info("[箱子登入]:初始化完成");
+
     }
 }
