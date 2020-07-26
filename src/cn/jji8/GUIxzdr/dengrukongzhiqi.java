@@ -130,6 +130,12 @@ public class dengrukongzhiqi implements Listener {//我是一个监听器,用来
         }
     }
     @EventHandler
+    public void WanJiaDiuWuPing(PlayerDropItemEvent dj){//玩家丢物品
+        if(biao.containsKey(dj.getPlayer().getName())){
+            dj.setCancelled(true);
+        }
+    }
+    @EventHandler
     public void WanJiaBeiDiYuMengChuanSong(PlayerPortalEvent dj){//玩家被地狱们传送
         if(biao.containsKey(dj.getPlayer().getName())){
             dj.setCancelled(true);
